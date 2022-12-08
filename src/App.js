@@ -3,12 +3,16 @@
 import styles  from './App.module.css';
 import React from "react";
 
+// import images 
+import Logo from './assets/react-logo.png';
+
 const App = () => {
   const mystyle = {
     color: "white",
     backgroundColor: "DodgerBlue",
     padding: "10px",
-    fontFamily: "Arial"
+    fontFamily: "Arial",
+    margin: "15px"
   };
   return (
     <div>
@@ -21,6 +25,8 @@ const App = () => {
         margin: 15,
       }}>Hello ReactJS !</div>
       <div style={mystyle}>Style exemple 2</div>
+      <img src={Logo} alt="logo" class={styles.center} height={350}
+          width={700}/>
     </div>
   );
 }

@@ -1,49 +1,28 @@
-import Expenses from "./components/Expenses/Expenses";
-import './App.css';
+// The CSS inside a module is available only for the component that imported it,
+// and you do not have to worry about name conflicts. (Like Angular component styling )
+import styles  from './App.module.css';
 import React from "react";
 
-
 const App = () => {
-  const expenses = [
-    {
-        id: 'e1',
-        title: 'Toilet Paper',
-        amount: 94.12,
-        date: new Date(2020, 7, 14),
-    },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
-    {
-        id: 'e3',
-        title: 'Car Insurance',
-        amount: 294.67,
-        date: new Date(2021, 2, 28),
-    },
-    {
-        id: 'e4',
-        title: 'New Desk (Wooden)',
-        amount: 450,
-        date: new Date(2021, 5, 12),
-    },
-];
-
-  // create element take 3 arguments 
-  // 1. nodeName :  name of html tag / or React component
-  // 2. props : list of props as an object
-  // 3. ...args : a list of child nodes
-  return React.createElement(
-    'div', // the node name
-    {},  // the props
-    // ... args: the child nodes 
-    React.createElement('div', {className: 'title'}, "Let's get started !"),
-    React.createElement(Expenses, {expenses})
-  )
-
-  // return (
-  //   <div>
-  //     <div className="title">Let's get started !</div>
-  //     <Expenses expenses={expenses}/>
-  //   </div>
-  // );
+  const mystyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Arial"
+  };
+  return (
+    <div>
+      <div className={styles.title}>Let's get started !</div>
+      <div style={{
+        color: 'red',
+        textAlign: 'center',
+        backgroundColor: "white",
+        padding: "15px",
+        margin: 15,
+      }}>Hello ReactJS !</div>
+      <div style={mystyle}>Style exemple 2</div>
+    </div>
+  );
 }
 
 export default App;

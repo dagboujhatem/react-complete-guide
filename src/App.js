@@ -34,7 +34,7 @@ const App = () => {
     // console.log(expenseData)
     // update the state 
     setExpenses((prevState)=>{
-      return [...prevState, expenseData]
+      return [expenseData, ...prevState]
     })
   }
 

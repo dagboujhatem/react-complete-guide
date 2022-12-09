@@ -6,13 +6,11 @@ import ExpensesFilter from './ExpensesFilter';
 const Expenses = (props) => {
     const { expenses } = props;
     const [selectedYear, setSelectedYear] = useState('2020')
-    const [filtredExpenses, setFiltredExpenses] = useState(expenses)
     const filterHandler = (filterOption) =>{
         // console.log(filterOption);
         setSelectedYear(filterOption);
-        const filtredExpenses = expenses.filter(item => item.date.getFullYear() === Number(selectedYear))
-        setFiltredExpenses(filtredExpenses)
     }
+    const filtredExpenses = expenses.filter(item => item.date.getFullYear() === Number(selectedYear))
 
     return (
         <div className='expenses'>

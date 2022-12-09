@@ -22,7 +22,8 @@ const ExpenseForm = (props) => {
     const submitHandler = (e) => {
         e.preventDefault();
         const entredData = {
-            ...data,
+            title: data.title,
+            amount: +data.amount,
             date: new Date(data.date),
             id: Math.random().toString()
         };

@@ -56,7 +56,7 @@ const ExpenseItem = (props) => {
             {/* <button onClick={clickHandler()}>Change title</button> */}
 
             {/* JSX event binding correctly */}
-            <button onClick={clickHandler}>Change title</button>
+            {/* <button onClick={clickHandler}>Change title</button> */}
         </Card>
     )
 }

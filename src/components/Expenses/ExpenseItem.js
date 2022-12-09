@@ -9,12 +9,12 @@ const ExpenseItem = (props) => {
     // const expenseAmount = 294.67;
     // let { expenseDate, expenseTitle, expenseAmount } = props;
 
-    const [title, setTitle] = useState(props.expenseTitle);
+    const [title, /*setTitle*/] = useState(props.expenseTitle);
     const [amount] = useState(props.expenseAmount);
     const [date] = useState(props.expenseDate);
 
     // click event 
-    const clickHandler = () => {
+    // const clickHandler = () => {
         // The re-assignment of any varible is NOT A TRIGGER FOR TEMPLATE RERENDRING 
         // SOLUTION : use sate in this case
         // console.log('Clicked !')
@@ -31,10 +31,10 @@ const ExpenseItem = (props) => {
         // title = 'updated state';
 
         // Correct assignment
-        console.log({ title, amount, date })
-        setTitle('Title changed !')
+    //     console.log({ title, amount, date })
+    //     setTitle('Title changed !')
 
-    }
+    // }
 
     return (
         <Card className="expense-item">
